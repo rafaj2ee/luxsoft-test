@@ -1,0 +1,32 @@
+# Actual environment
+spring: 
+  profiles:
+    active: "development"
+    
+---
+# Development Profile 
+server:
+  port: 8095
+spring:
+  profiles: development
+url:
+  itunes: https://itunes.apple.com/search?entity=album&term=:term
+  google: https://www.googleapis.com/books/v1/volumes?q={term}  
+---
+# Staging Profile 
+server:
+  port: 8095
+spring:
+  profiles: production
+url:
+  itunes: https://itunes.apple.com/search?entity=album&term=:term
+  google: https://www.googleapis.com/books/v1/volumes?q={:term}  
+---
+# Production Profile 
+server:
+  port: 8095
+spring:
+  profiles: production
+url:
+  itunes: https://itunes.apple.com/search?entity=album&term=:term
+  google: https://www.googleapis.com/books/v1/volumes?q={:term}  
