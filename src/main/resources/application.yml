@@ -1,7 +1,7 @@
 # Actual environment
 spring: 
   profiles:
-    active: "development"
+    active: "production"
     
 ---
 # Development Profile 
